@@ -1,15 +1,13 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const token = 'NzA0MzM2NzkzODcyNjI5Nzkx.Xqbq2g.zjIdNOuqBqcxctvqFMM7LklYUCE';
-
 const prefix = '-';
 
-bot.on('ready', () =>{
+client.on('ready', () =>{
     console.log('wavehelp');
-})
+});
 
-bot.on('message', msg=>{
+client.on('message', msg=>{
 
   let args = msg.content.substring(prefix.length).split(" ");
 
@@ -42,5 +40,6 @@ bot.on('message', msg=>{
       msg.reply('Sulfur | FY5346%27');
       break;
   }
-})
-bot.login(token);
+});
+
+client.login(process.env.BOT_TOKEN);
